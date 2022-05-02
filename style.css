@@ -1,0 +1,365 @@
+html {
+    font-family: 'Barlow',
+        sans-serif;
+}
+
+@media (max-width: 1200px) {
+    .conteinerBackground {
+        display: block;
+    }
+}
+
+.conteinerBackground {
+    display: flex;
+}
+
+.backgroundLeft_textConteiner {
+    margin-top: 30px;
+    margin-left: 50px;
+    height: 50px;
+    width: 100px;
+    display: flex;
+}
+
+.backgroundLeft {
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    height: 47.5vw;
+    width: 50vw;
+}
+
+.backgroundLeft_text1 {
+    font-size: 52px;
+    color: white;
+}
+
+.backgroundLeft_text2 {
+    margin-top: 15px;
+    margin-left: 5px;
+    font-size: 14px;
+    color: white;
+}
+
+.backgroundRight {
+    margin-top: 20px;
+    margin-left: 80px;
+    height: 30vw;
+}
+
+
+/*текст вначале формы*/
+.backgroundRight_text-info {
+    color: grey;
+    font-size: 24px;
+}
+
+.backgroundRight_text-title {
+    color: rgb(120, 120, 120);
+    font-size: 36px;
+}
+
+
+/*кнопки соц сети*/
+.backgroundRigth_button {
+    margin-top: 50px;
+}
+
+.backgroundRigth_button-facebook {
+    height: 40px;
+    width: 260px;
+    background-color: #3b5998;
+    color: white;
+    border: none;
+}
+
+.backgroundRigth_button-linkedin {
+    height: 40px;
+    width: 260px;
+    margin-left: 30px;
+    background-color: #0e76a8;
+    color: white;
+    border: none;
+}
+
+.backgroundRigth_button-facebook-img {
+    height: 18px;
+    width: 18px;
+    float: left;
+}
+
+.backgroundRigth_button-facebook:hover {
+    border-radius: 20px;
+}
+
+.backgroundRigth_button-linkedin:hover {
+    border-radius: 20px;
+}
+
+
+
+
+/*текст с полосками*/
+.backgroundRigt_zero-text {
+    /* Чтобы спрятать часть линий, которые 
+    ** будут вылазить за пределы блока */
+    overflow: hidden;
+    /* Выравнивание заголовка по центру, 
+    ** можно использовать left, right */
+    text-align: center;
+    /* Тут можно добавить другие стили для заголовка */
+    font-size: 18px;
+    width: 300px;
+    margin-left: 125px;
+    margin-top: 30px;
+}
+
+.backgroundRigt_zero-text span {
+    /* Стили тега обертки для заголовков 
+    ** в несколько строк */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.backgroundRigt_zero-text:before,
+.backgroundRigt_zero-text:after {
+    /* Обязательно указываем пустое свойство content, 
+    ** иначе псевдоэлементы не появятся на сайте */
+    content: "";
+    /* Указываем что наши линии будут строчно-блочные и 
+    ** выравнивание по высоте - по центру */
+    display: inline-block;
+    vertical-align: middle;
+    /* Задаем ширину 100% и выбираем высоту линии, 
+    ** в нашем примере она равна 4 пикселям */
+    width: 50%;
+    height: 1px;
+    opacity: 50%;
+    /* Добавляем цвет для линии */
+    background-color: rgb(120, 120, 120);
+    /* Добавляем пседоэлемантам возможность изменить 
+    ** позицию линии, для создания отступов от текста */
+    position: relative;
+}
+
+.backgroundRigt_zero-text:before {
+    /* Смещаем левую линию на 100% влево, чтобы линия 
+    ** встала рядом с текстом слева */
+    margin-left: -100%;
+    /* Указываем в пикселях отступ линии от текста заголовка */
+    left: -14px;
+}
+
+.backgroundRigt_zero-text:after {
+    /* Смещаем правую линию на 100% вправо, чтобы 
+    ** линия встала рядом с текстом справа */
+    margin-right: -100%;
+    /* Указываем в пикселях отступ линии от текста заголовка */
+    right: -14px;
+}
+
+
+
+
+
+/*инпуты*/
+/* Первый Инпут */
+.backgroundRight_form-input-floating {
+    position: relative;
+}
+
+.backgroundRight_form-input-floating .backgroundRight_form-input1 {
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+    border-radius: 0;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    height: 30px;
+    width: 260px;
+    line-height: 1.25;
+    padding: 1rem 0.75rem;
+    background-color: #f5f5f5;
+}
+
+.backgroundRight_form-input-floating .backgroundRight_form-input1:focus {
+    outline: 0;
+    border-left: 1px solid #03a9f4;
+    box-shadow: none;
+    background-color: #eee;
+}
+
+.backgroundRight_form-input-floating .backgroundRight_form-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1rem .75rem;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: color .15s ease-in-out, transform .15s ease-in-out;
+}
+
+.backgroundRight_form-input-floating .backgroundRight_form-input1::-moz-placeholder {
+    color: transparent;
+}
+
+.backgroundRight_form-input-floating .backgroundRight_form-input1::placeholder {
+    color: transparent;
+}
+
+.backgroundRight_form-input-floating .backgroundRight_form-input1:focus,
+.backgroundRight_form-input-floating .backgroundRight_form-input1:not(:placeholder-shown) {
+    padding-top: 1.625rem;
+    padding-bottom: 0px;
+    border-left: 1px solid #03a9f4;
+}
+
+.backgroundRight_form-input-floating .backgroundRight_form-input1:focus~.backgroundRight_form-label,
+.backgroundRight_form-input-floating .backgroundRight_form-input1:not(:placeholder-shown)~.backgroundRight_form-label {
+    transform: scale(.85) translateY(-.75rem) translateX(.15rem);
+    color: #03a9f4;
+}
+
+
+/* Второй Инпут */
+.backgroundRight_form-input-floating1 {
+    position: relative;
+}
+
+.backgroundRight_form-input-floating1 .backgroundRight_form-input2 {
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+    border-radius: 0;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    height: 30px;
+    width: 260px;
+    margin-left: 30px;
+    line-height: 1.25;
+    padding: 1rem 0.75rem;
+    background-color: #f5f5f5;
+}
+
+.backgroundRight_form-input-floating1 .backgroundRight_form-input2:focus {
+    outline: 0;
+    border-left: 1px solid #03a9f4;
+    box-shadow: none;
+    background-color: #eee;
+}
+
+.backgroundRight_form-input-floating1 .backgroundRight_form-label1 {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    height: 100%;
+    padding: 1rem .75rem;
+    pointer-events: none;
+    border: 1px solid transparent;
+    transform-origin: 0 0;
+    transition: color .15s ease-in-out, transform .15s ease-in-out;
+}
+
+.backgroundRight_form-input-floating1 .backgroundRight_form-input2::-moz-placeholder {
+    color: transparent;
+}
+
+.backgroundRight_form-input-floating1 .backgroundRight_form-input2::placeholder {
+    color: transparent;
+}
+
+.backgroundRight_form-input-floating1 .backgroundRight_form-input2:focus,
+.backgroundRight_form-input-floating1 .backgroundRight_form-input2:not(:placeholder-shown) {
+    padding-top: 1.625rem;
+    padding-bottom: 0px;
+    border-left: 1px solid #03a9f4;
+}
+
+.backgroundRight_form-input-floating1 .backgroundRight_form-input2:focus~.backgroundRight_form-label1,
+.backgroundRight_form-input-floating1 .backgroundRight_form-input2:not(:placeholder-shown)~.backgroundRight_form-label1 {
+    transform: scale(.85) translateY(-.75rem) translateX(.15rem);
+    color: #03a9f4;
+}
+
+.backgroundRight_form-input_conteiner {
+    margin-top: 40px;
+    display: flex;
+    padding-bottom: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+/*текст после инпутов*/
+.backgroundRight_form-text {
+    padding-top: 0px;
+}
+
+.backgroundRight_form-text-h {
+    color: rgb(120, 120, 120);
+}
+
+.backgroundRight_form-text-p {
+    color: grey;
+}
+
+/*radio-button*/
+.backgroundRight_form-radio {
+    margin-top: 20px;
+}
+
+#business-radio {
+    margin-left: 100px;
+}
+
+#IRA-radio {
+    margin-left: 100px;
+}
+
+#Trust-radio {
+    margin-left: 100px;
+}
+
+.backgroundRight_form-radio-label {
+    font-size: 18px;
+}
+
+/*text display none*/
+.backgroundRight_form-questions-span {
+    width: 300px;
+    color: grey;
+    margin-left: 20px;
+    opacity: 0%;
+}
+
+/*checkbox*/
+.backgroundRight_form-checkbox {
+    margin-top: 30px;
+}
+
+.backgroundRight_form-checkbox-label {
+    color: rgb(120, 120, 120);
+}
+
+/*submit-button*/
+.backgroundRight_form-button {
+    margin-top: 30px;
+}
+
+.backgroundRight_form-button-btn {
+    width: 210px;
+    height: 40px;
+    color: white;
+    background-color: rgb(0, 162, 255);
+    border-radius: 4px;
+    border: none;
+}
+
+.backgroundRight_form-button-btn:hover {
+    background-color: rgb(255, 0, 174)
+}
